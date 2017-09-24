@@ -29,6 +29,7 @@
         <!--&lt;!&ndash; List of XML mapping files &ndash;&gt;-->
         <!--<mapping resource="Cars.hbm.xml"/>-->
         <mapping   class="com.votchenko.hibTest.Entity.Car"/>
+        <mapping class="com.votchenko.hibTest.Entity.Driver"/>
 
     </session-factory>
 </hibernate-configuration>

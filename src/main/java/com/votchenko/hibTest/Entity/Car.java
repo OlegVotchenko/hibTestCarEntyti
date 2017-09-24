@@ -1,10 +1,28 @@
 package com.votchenko.hibTest.Entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "Car")
 public class Car {
+
+
+    public Set<Driver> getDriverSet() {
+        return driverSet;
+    }
+
+    public void setDriverSet(Set<Driver> driverSet) {
+        this.driverSet = driverSet;
+    }
+
+    @ManyToMany
+    @JoinTable(name = "driver_car",
+            joinColumns = @JoinColumn(name = "car_id"),
+            inverseJoinColumns = @JoinColumn(name = "driver_id"))
+    private Set<Driver> driverSet = new HashSet<>();
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
