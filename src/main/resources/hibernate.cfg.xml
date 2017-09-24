@@ -26,8 +26,9 @@
             update
         </property>
 
-        <!-- List of XML mapping files -->
-        <mapping resource="Cars.hbm.xml"/>
+        <!--&lt;!&ndash; List of XML mapping files &ndash;&gt;-->
+        <!--<mapping resource="Cars.hbm.xml"/>-->
+        <mapping   class="com.votchenko.hibTest.Entity.Car"/>
 
     </session-factory>
 </hibernate-configuration>

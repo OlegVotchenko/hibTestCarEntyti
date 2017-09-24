@@ -1,21 +1,29 @@
 package com.votchenko.hibTest.Entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-@Table
+@Table(name = "Car")
 public class Car {
-   private long id;
-   private String mark;
-   private String model;
-   private int year;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+    @Column(name = "mark")
+    private String mark;
+
+    @Column(name = "model")
+    private String model;
+
+    @Column(name = "year")
+    private int year;
 
 
     public Car() {
     }
 
-    public Car( String mark, String model, int year) {
+    public Car(String mark, String model, int year) {
         this.mark = mark;
         this.model = model;
         this.year = year;

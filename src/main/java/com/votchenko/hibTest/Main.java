@@ -28,7 +28,7 @@ public class Main {
            System.out.println ("Done saving id=" + car.getId ());
            System.out.println ("Done saving id=" + car2.getId ());
            System.out.println ("Done saving id=" + car3.getId ());
-           List<Car> cars = session.createQuery ("from Car" ).list ();
+           List<Car> cars = session.createQuery("from Car", Car.class).list();
 
            cars.forEach (System.out::println);
        }
