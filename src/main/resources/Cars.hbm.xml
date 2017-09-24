@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.votchenko.hibTest.Entity.Car" table="Cars">
+        <meta attribute="class-description">
+            This class contains the employee detail.
+        </meta>
+        <id name="id" type="long" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="mark" column="mark" type="string"/>
+        <property name="model" column="model" type="string"/>
+        <property name="year" column="salary" type="int"/>
+    </class>
+</hibernate-mapping>
